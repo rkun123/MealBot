@@ -5,10 +5,12 @@ import os
 
 
 #Tokens define
-TOKEN = "880400083178487808-pmaZtHEKPdp0z6GeXSILlfwtfJVXSKv"
-TOKEN_SECRET = "FEjMBnfy0lpPlKiLJn7OtoblZfquuMKuv0yg2H6TfPnq1"
-CONSUMER = "A0Ukc5aY4WTv8dyqqhZAF3vGW"
-CONSUMER_SECRET = "BI4Dclwrex0mkY33UH8up3jnN44gqxC3X9hAHzleGlxZlUF7xq"
+tokensFile = open(os.path.dirname(os.path.abspath(__file__)) + "/tokens.json")
+tokens = json.load(tokensFile)
+TOKEN = tokens["token"]
+TOKEN_SECRET = tokens["token_secret"]
+CONSUMER = tokens["consumer"]
+CONSUMER_SECRET = tokens["consumer_secret"]
 
 #t = Twitter(auth=OAuth(TOKEN, TOKEN_SECRET, CONSUMER, CONSUMER_SECRET))
 
@@ -40,7 +42,7 @@ def check():
     f = open(fileName, 'r')
     fixData = json.load(f)
     for fix in fixData:
-        
+
         if fix["range"] == False:
             print("PinPoint:",fix)
             if today == datetime.datetime.strptime(fix["date"], '%Y/%m/%d'):
