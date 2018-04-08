@@ -1,0 +1,30 @@
+[
+    {
+        "range": true,
+        "start": "2018/04/01",
+        "end": "2018/09/21",
+        "price":{
+            "remoter":600,
+            "gmter":600
+        }
+    },
+
+    {
+        "range": true,
+        "start":"2018/04/01",
+        "end":"2018/09/21",
+        "price":{
+            "remoter":600,
+            "gmter":600
+        }
+    },
+
+    {
+        "range":false,
+        "date":"2018/04/08",
+        "price":{
+            "remoter":650,
+            "gmter":600
+        }
+    }
+]
