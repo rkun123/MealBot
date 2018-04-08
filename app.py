@@ -12,9 +12,9 @@ TOKEN_SECRET = tokens["token_secret"]
 CONSUMER = tokens["consumer"]
 CONSUMER_SECRET = tokens["consumer_secret"]
 
-#t = Twitter(auth=OAuth(TOKEN, TOKEN_SECRET, CONSUMER, CONSUMER_SECRET))
+t = Twitter(auth=OAuth(TOKEN, TOKEN_SECRET, CONSUMER, CONSUMER_SECRET))
 
-#t.statuses.update(status="Bot稼働開始")
+t.statuses.update(status="Bot稼働開始")
 
 TEMPLATE = """[ミールカード利用額Bot]
 今日({0})の利用可能額は、
@@ -74,10 +74,10 @@ def check():
 def update():
     _prices = check()
     print(_prices)
-    #if _prices["flag"] == False:
-    #    t.statuses.update(status= TEMPLATE_FALSE.format(today.today()))
-    #else:
-    #    t.statuses.update(status= TEMPLATE.format(today.today(), _prices["remoter"], _prices["gmter"]))
+    if _prices["flag"] == False:
+        t.statuses.update(status= TEMPLATE_FALSE.format(today.today()))
+    else:
+        t.statuses.update(status= TEMPLATE.format(today.today(), _prices["remoter"], _prices["gmter"]))
 
 
 update()
