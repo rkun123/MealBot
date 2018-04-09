@@ -14,7 +14,7 @@ CONSUMER_SECRET = tokens["consumer_secret"]
 
 t = Twitter(auth=OAuth(TOKEN, TOKEN_SECRET, CONSUMER, CONSUMER_SECRET))
 
-t.statuses.update(status="Bot稼働開始")
+#t.statuses.update(status="Bot稼働開始")
 
 TEMPLATE = """[ミールカード利用額Bot]
 今日({0})の利用可能額は、
