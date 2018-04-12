@@ -75,9 +75,9 @@ def update():
     _prices = check()
     print(_prices)
     if _prices["flag"] == False:
-        t.statuses.update(status= TEMPLATE_FALSE.format(today.today()))
+        t.statuses.update(status= TEMPLATE_FALSE.format(today.date()))
     else:
-        t.statuses.update(status= TEMPLATE.format(today.today(), _prices["remoter"], _prices["gmter"]))
+        t.statuses.update(status= TEMPLATE.format(today.date(), _prices["remoter"], _prices["gmter"]))
 
 
 update()
