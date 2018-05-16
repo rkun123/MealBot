@@ -2,7 +2,7 @@
 稼働中:
 [rkun on Twitter](https://twitter.com/rkunkunr)
 
-毎朝7:00につぶやきます。現在自宅ラズパイ鯖にて運用中。
+毎朝7:00につぶやきます。VPSを借りたのでVPSで運用中。
 
 ## fix.jsonについて
 - 不定期のルールを作るときにfix.jsonに書き込む。
